@@ -18,8 +18,6 @@ DROP TABLE IF EXISTS firsttable CASCADE;
 DROP TABLE IF EXISTS multa CASCADE; 
 DROP TABLE IF EXISTS reserva CASCADE; 
 DROP TABLE IF EXISTS emprestar CASCADE; 
-DROP TABLE IF EXISTS agendar CASCADE; 
-DROP TABLE IF EXISTS acessar CASCADE; 
 
 DROP TABLE IF EXISTS livro CASCADE; 
 CREATE TABLE livro ( 
@@ -180,32 +178,7 @@ CREATE TABLE avaliar(
 
 
 DROP TABLE IF EXISTS acessar; 
-/*
-CREATE TABLE acessar( 
-	email VARCHAR(50),
-	nome VARCHAR(80),
- 	tempo_acesso TIMESTAMP,
-	PRIMARY KEY(email,tempo_acesso)
-	FOREIGN KEY (email, nome) REFERENCES utilizador(email,nome),
-	FOREIGN KEY (sala_id) REFERENCES sala(id)
-	-- só podem ser reservadas por 3 horas
-) ;
 
-DROP TABLE IF EXISTS reserva; 
-CREATE TABLE reserva( 
- 	email VARCHAR(50),
-	id_livro INT , 
- 	titulo VARCHAR(250) , 
- 	biblioteca_nome VARCHAR(35), 
- 	data_reserva DATE, 
- 	prazo_limite DATE, 
- 	PRIMARY KEY (email, id_livro, biblioteca_nome) ,
- 	FOREIGN KEY (biblioteca_nome) REFERENCES biblioteca(nome), 
- 	FOREIGN KEY (email) REFERENCES utilizador(email), 
- 	FOREIGN KEY (titulo,id_livro) REFERENCES livro(titulo,id) 
-) ;
-*/
- 
 DROP TABLE IF EXISTS livro_acessado; 
 CREATE TABLE livro_acessado( 
 	id_aluno INT,
